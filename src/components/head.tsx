@@ -8,27 +8,9 @@ export function Head({ metadata }: { metadata: Metadata }) {
 
 			<meta charSet='utf-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1' />
-			<meta name='author' content='Harshhaa Vardhan Reddy' />
+			<meta name='author' content='Uthrapathy M' />
 			<meta name='robots' content='index, follow' />
 
-			<meta property='og:title' content={metadata.title?.toString()} />
-			<meta property='og:description' content={metadata.description?.toString()} />
-			<meta property='og:url' content='https://cv.notharshhaa.site' />
-			<meta property='og:image' content='https://cv.notharshhaa.site/opengraph-image.png' />
-			<meta property='og:image:width' content='1200' />
-			<meta property='og:image:height' content='630' />
-			<meta property='og:image:alt' content='Harshhaa Vardhan Reddy' />
-			<meta property='og:image:type' content='image/png' />
-
-			<meta name='twitter:card' content='summary_large_image' />
-			<meta name='twitter:creator' content='@NotHarshhaa' />
-			<meta name='twitter:title' content={metadata.title?.toString()} />
-			<meta name='twitter:description' content={metadata.description?.toString()} />
-			<meta name='twitter:image' content='https://cv.notharshhaa.site/opengraph-image.png' />
-			<meta property='twitter:image:width' content='1200' />
-			<meta property='twitter:image:height' content='630' />
-			<meta property='twitter:image:alt' content='Harshhaa Vardhan Reddy' />
-			<meta property='twitter:image:type' content='image/png' />
 
 			<meta name='msapplication-TileColor' content='#000000' />
 			<meta name='theme-color' content='#000000'></meta>

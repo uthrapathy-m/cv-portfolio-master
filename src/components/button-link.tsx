@@ -1,4 +1,4 @@
-import { MailIcon, PhoneIcon, AppWindowIcon, LinkIcon } from 'lucide-react'
+import { MailIcon, AppWindowIcon, LinkIcon } from 'lucide-react'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 import { Button } from './ui/button'
 import { type ResumeData } from '@/types'
@@ -16,16 +16,11 @@ export function ButtonLink({ data }: { data: ResumeData }) {
 			icon: MailIcon
 		},
 		{
-			name: data.contact.tel.name,
-			url: `tel:${data.contact.tel.phoneNumber}`,
-			icon: PhoneIcon
-		},
-		{
 			name: data.contact.link.name,
 			url: data.contact.link.url,
 			icon: LinkIcon
 		}
-	]
+	].filter(link => link.url !== '#') // Filter out placeholder links
 
 	return (
 		<div className='flex flex-wrap gap-2'>

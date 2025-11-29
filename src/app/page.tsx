@@ -37,7 +37,7 @@ export default function Page() {
 						</div>
 					</div>
 
-					<a href='https://github.com/NotHarshhaa' target='_blank' rel='noopener noreferrer' className='group'>
+					<a href='https://github.com/uthrapathy-m' target='_blank' rel='noopener noreferrer' className='group'>
 						<Avatar className='size-32 border-2 border-border transition-all duration-300 group-hover:scale-105 sm:size-40' active status="online">
 							<AvatarImage src={RESUME_DATA.avatar} alt={RESUME_DATA.name} className='object-cover' />
 							<AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
@@ -161,10 +161,6 @@ export default function Page() {
 						url: `mailto:${data.contact.email.at}`,
 						title: data.contact.email.name
 					},
-					{
-						url: `tel:${data.contact.tel.phoneNumber}`,
-						title: data.contact.tel.name
-					},
 					...data.contact.social.map((socialMediaLink) => ({
 						url: socialMediaLink.url,
 						title: socialMediaLink.name
@@ -173,7 +169,7 @@ export default function Page() {
 						url: data.contact.link.url,
 						title: data.contact.link.name
 					}
-				]}
+				].filter(link => link.url !== '#')}
 			/>
 			<div className="fixed top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-50 print:hidden">
                 <ThemeToggle />
